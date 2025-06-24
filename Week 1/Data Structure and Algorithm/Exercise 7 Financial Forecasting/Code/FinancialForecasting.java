@@ -12,6 +12,11 @@ public class FinancialForecasting {
             return calculateFutureValue(presentValue * (1 + rate), rate, periods - 1);
         }
     }
+    /*Recursive function takes O(n) time complexity
+    and O(n) space complexity due to the call stack.
+    the better approach is to use a loop/iteration
+    which takes O(n) time complexity and O(1) space complexity.
+     */
 
     public static void main(String[] args) {
         double presentValue;

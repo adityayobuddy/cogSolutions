@@ -1,6 +1,6 @@
 public class SearchFunctions {
 
-    //linear search
+    //linear search takes O(n) time complexity and O(1) space complexity
 
     public static Product linearSearch(Product[] products, String targetName) {
         for (Product product : products) {
@@ -13,7 +13,8 @@ public class SearchFunctions {
         return null;
     }
 
-    //binary search
+    //binary search takes O(log n) time complexity and O(1) space complexity
+    //array must be sorted before using binary search
     public static Product binarySearch(Product[] products, String targetName) {
         int left = 0;
         int right = products.length - 1;
