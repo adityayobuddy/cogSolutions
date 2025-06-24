@@ -9,16 +9,23 @@ public class Main {
             new Product(3, "Shirt", "Clothing"),
             new Product(4, "Watch", "Accessories")
         };
+        System.out.println("\nWelcome to the E-commerce Website\n");
+        System.out.println("Products in Stock:\n");
+        for (Product product : products) {
+            System.out.println("ID: " + product.getProductId() + ", Name: " + product.getProductName() + ", Category: " + product.getCategory());
+        }
 
         Scanner scanner = new Scanner(System.in);
 
         // Take input from user
-        System.out.print("Enter product name to search: ");
+        System.out.print("\nEnter product name to search: ");
 
         String inputName = scanner.nextLine();
 
         System.out.println("Linear Search:");
 
+
+        
         Product linearResult = SearchFunctions.linearSearch(products, inputName);
 
         if (linearResult != null) {
